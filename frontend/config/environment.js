@@ -24,7 +24,7 @@ module.exports = function(environment) {
   };
 
   ENV['ember-google-maps'] = {
-    key: process.env.GOOGLE_MAPS_API_KEY, // Using .env files in this example
+    key: process.env.GOOGLE_MAPS_API_KEY,
     language: 'fr',
     region: 'FR',
     protocol: 'https',
