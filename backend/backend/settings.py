@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 import json
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-with open(BASE_DIR + '/server/config.json', 'r') as config:
+with open(BASE_DIR + '/backend/config.json', 'r') as config:
     secret = json.load(config)
 SECRET_KEY = secret["API_KEY"]
 
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
