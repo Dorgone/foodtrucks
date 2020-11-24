@@ -33,9 +33,12 @@ class foodtruckAPIView(mixins.CreateModelMixin, generics.ListAPIView):
               'isOpen': False,
             },
         )
+        if created:
+          print(foodtruck["applicant"], " - ", foodtruck["address"])
 
 
     def get_queryset(self):
+      #Foodtruck.objects.all().delete()
       self.initialize_dataset()
       return Foodtruck.objects.all()
 

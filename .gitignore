@@ -1,5 +1,4 @@
 ### Django ###
-config.json
 *.log
 *.pot
 *.pyc
@@ -7,21 +6,25 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
+# secret
+config.json
 
 ### Ember ###
-/client/dist
-/client/tmp
+/frontend/dist
+/frontend/tmp
 # dependencies
-/client/node_modules
-/client/bower_components
+/frontend/node_modules
+/frontend/bower_components
 # misc
-/client/.sass-cache
-/client/connect.lock
-/client/coverage/*
-/client/libpeerconnection.log
-/client/npm-debug.log
-/client/testem.log
+/frontend/.sass-cache
+/frontend/connect.lock
+/frontend/coverage/*
+/frontend/libpeerconnection.log
+/frontend/npm-debug.log
+/frontend/testem.log
 # ember-try
-/client/.node_modules.ember-try/
-/client/bower.json.ember-try
-/client/package.json.ember-try
+/frontend/.node_modules.ember-try/
+/frontend/bower.json.ember-try
+/frontend/package.json.ember-try
+# secret
+/frontend/.env
