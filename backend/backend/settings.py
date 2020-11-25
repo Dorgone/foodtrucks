@@ -25,7 +25,7 @@ import json
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open(BASE_DIR + '/backend/config.json', 'r') as config:
     secret = json.load(config)
-SECRET_KEY = secret["API_KEY"] ##
+SECRET_KEY = secret["API_KEY"] # SECRET_KEY is stored in config.json file ignored by .gitignore
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -43,9 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', ##
-    'corsheaders', ##
-    'foodtrucks', ##
+    'rest_framework', # used to serialize foodtruck model into json RESTful API
+    'corsheaders', # used to tackle the CORS headers problem
+    'foodtrucks', # project app
 ]
 
 MIDDLEWARE = [
@@ -164,7 +164,7 @@ REST_FRAMEWORK = { ##
     'TEST_REQUEST_DEFAULT_FORMAT': 'vnd.api+json',
 
     'DEFAULT_PERMISSION_CLASSES': [      
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
     ],
 }
 

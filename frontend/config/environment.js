@@ -24,7 +24,7 @@ module.exports = function(environment) {
   };
 
   ENV['ember-google-maps'] = {
-    key: process.env.GOOGLE_MAPS_API_KEY,
+    key: process.env.GOOGLE_MAPS_API_KEY, // retrieves GOOGLE_MAPS_API_KEY from .env file in frontend directory thanks to ember-cli-dotenv
     language: 'fr',
     region: 'FR',
     protocol: 'https',

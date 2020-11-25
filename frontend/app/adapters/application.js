@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 
 export default DS.JSONAPIAdapter.extend({
   host: computed(function(){
-    return 'http://localhost:8000';
+    return 'http://localhost:8000'; // indicates backend API endpoint
   }),
   namespace: 'api'
 });

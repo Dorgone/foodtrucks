@@ -5,6 +5,6 @@ export default Route.extend({
     store: service(),
     model() {
         const store = this.get('store');
-        return store.findAll('foodtruck');
+        return store.findAll('foodtruck'); // returns all of the foodtruck models consumed from the backend API
     }
 });

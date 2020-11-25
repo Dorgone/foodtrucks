@@ -1,5 +1,5 @@
 <div>
-    {{#g-map lat="37.75856121492359" lng="-122.4482964862671" markers=markers zoom=12 as |g|}}
+    {{#g-map lat="37.75856121492359" lng="-122.4482964862671" zoom=12 as |g|}}
         {{#each this.model as |foodtruck|}}
             {{#g.marker
                 lat=foodtruck.latitude
