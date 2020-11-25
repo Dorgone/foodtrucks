@@ -29,7 +29,7 @@ SECRET_KEY = secret["API_KEY"] # SECRET_KEY is stored in config.json file ignore
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False # change to False in production and True in development
 
 ALLOWED_HOSTS = []
 
@@ -170,4 +170,4 @@ REST_FRAMEWORK = { ##
 
 
 
-CORS_ORIGIN_ALLOW_ALL = DEBUG ##
+CORS_ORIGIN_ALLOW_ALL = True #
